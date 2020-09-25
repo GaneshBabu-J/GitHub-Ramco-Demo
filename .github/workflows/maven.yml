@@ -10,7 +10,7 @@ jobs:
       - name: Runner workspace path
         run: |
           echo "Cleaning up previous run"
-          rm -rf "${{ github.workspace }}"
+          rm -r "${{ github.workspace }}"
   build:
 
     runs-on: self-hosted
