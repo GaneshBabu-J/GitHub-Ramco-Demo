@@ -3,6 +3,14 @@ name: Java CI
 on: push
 
 jobs:
+
+  cleaner:
+    runs-on: self-hosted
+    steps:
+      - name: Runner workspace path
+        run: |
+          echo "Cleaning up previous run"
+          rm -rf "${{ github.workspace }}"
   build:
 
     runs-on: self-hosted
